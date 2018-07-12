@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6gh-RG-hdD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color Picker View Controller-->
+        <scene sceneID="SBV-N0-xye">
+            <objects>
+                <viewController id="6gh-RG-hdD" customClass="ColorPickerViewController" customModule="Color_Picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N9M-Zz-9mj" customClass="Col">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df1-qj-Eep">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6gh-RG-hdD" id="oxY-QZ-Hvh"/>
+                                    <outlet property="delegate" destination="6gh-RG-hdD" id="gom-WV-oBG"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRG-2q-z3h">
+                                <rect key="frame" x="166" y="390" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Df1-qj-Eep" firstAttribute="trailing" secondItem="XAi-jF-hpG" secondAttribute="trailing" id="2se-0a-sU6"/>
+                            <constraint firstItem="Df1-qj-Eep" firstAttribute="top" secondItem="wRG-2q-z3h" secondAttribute="bottom" constant="40" id="Rgh-dE-kmj"/>
+                            <constraint firstItem="XAi-jF-hpG" firstAttribute="bottom" secondItem="Df1-qj-Eep" secondAttribute="bottom" id="gvC-Lo-Zug"/>
+                            <constraint firstItem="Df1-qj-Eep" firstAttribute="leading" secondItem="XAi-jF-hpG" secondAttribute="leading" id="pNF-5f-eUv"/>
+                            <constraint firstItem="wRG-2q-z3h" firstAttribute="centerX" secondItem="XAi-jF-hpG" secondAttribute="centerX" id="wyo-iV-ykI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XAi-jF-hpG"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="wRG-2q-z3h" id="hY8-7C-6WD"/>
+                        <outlet property="colorPicker" destination="Df1-qj-Eep" id="Nea-es-GTr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cT-6b-IdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="90"/>
+        </scene>
+    </scenes>
+</document>
